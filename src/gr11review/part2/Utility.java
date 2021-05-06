@@ -1,6 +1,7 @@
 //package gr11review.part2;
 import java.io.*;
 import java.util.Scanner;
+import java.util.Arrays;  
 public class Utility {
     public static String zipZap(String str){
         for(char i='a';i<'z';i++){
@@ -38,18 +39,19 @@ public class Utility {
             return true;
         return false;
     }
-    // I wanted to use a recursive binary search but I kinda gave up
-    /*private static int binarySearch(int l, int r, int x, int comparisons, int[] num){
-	    if (r >= l){
-			int mid = l + (r - l) / 2;
-			if (num[mid] == x){
-				return comparisons;
-			}
-			if (num[mid] > x){
-				return binarySearch(l, mid - 1, x, comparisons + 1, num);
-			}
-			return binarySearch(mid + 1, r, x, comparisons + 1, num);
-		}
-		return -1;
-	}*/
+    public static void pascalTri(int i, int j){
+        int[][] triangle = new int[j][i];
+        for(int rcx=0;rcx<i;rcx++){
+            for(int ecx=0;ecx<j;ecx++){
+                if(ecx==0||rcx==0)
+                    triangle[ecx][rcx]=1;
+                else
+                    triangle[ecx][rcx] = triangle[ecx-1][rcx]+triangle[ecx][rcx-1];
+                System.out.print(triangle[ecx][rcx]);
+                if(ecx!=j-1)
+                    System.out.print(",");
+            }
+            System.out.println("");
+        }
+    }
 }
