@@ -37,6 +37,9 @@ public class Utility {
     for (count = 0; count < nums.length; count++){
       leftSum += nums[count];
       rightSum = 0;
+      for (countAlt = nums.length - 1; countAlt > count; countAlt--){
+        rightSum += nums[countAlt];
+      }
     }
   }
 }
