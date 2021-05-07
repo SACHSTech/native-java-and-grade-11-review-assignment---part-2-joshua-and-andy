@@ -29,5 +29,6 @@ public class Utility {
     }
     return myArray;
   }
+  public static boolean canBalance(int[] nums){
 }
 
