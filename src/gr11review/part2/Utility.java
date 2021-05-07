@@ -34,6 +34,6 @@ public class Utility {
     int rightSum = 0;
     int count;
     int countAlt;
-    
+  }
 }
 
