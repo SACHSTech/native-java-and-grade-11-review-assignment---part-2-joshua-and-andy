@@ -40,6 +40,9 @@ public class Utility {
       for (countAlt = nums.length - 1; countAlt > count; countAlt--){
         rightSum += nums[countAlt];
       }
+      if (LeftSum == rightSum){
+        return true;
+      }
     }
   }
 }
