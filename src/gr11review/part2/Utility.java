@@ -34,6 +34,10 @@ public class Utility {
     int rightSum = 0;
     int count;
     int countAlt;
+    for (count = 0; count < nums.length; count++){
+      leftSum += nums[count];
+      rightSum = 0;
+    }
   }
 }
 
