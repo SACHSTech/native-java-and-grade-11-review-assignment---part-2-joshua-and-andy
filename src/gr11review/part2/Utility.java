@@ -27,6 +27,7 @@ public class Utility {
         myArray[count] = nums[count];
      }
     }
+    return myArray;
   }
 }
 
