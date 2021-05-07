@@ -30,5 +30,10 @@ public class Utility {
     return myArray;
   }
   public static boolean canBalance(int[] nums){
+    int LeftSum = 0;
+    int rightSum = 0;
+    int count;
+    int countAlt;
+    
 }
 
