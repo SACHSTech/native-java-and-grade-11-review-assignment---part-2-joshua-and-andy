@@ -15,6 +15,11 @@ public class Utility {
     }
   }
     public static int[] notAlone(int[] nums, int value){
-      
+     int myArray[] = new int [nums.length];
+     if (nums.length >= 1){
+            myArray[0] = nums[0];
+            myArray[nums.length - 1] = nums[nums.length - 1];
+    }
+  }
 }
 
