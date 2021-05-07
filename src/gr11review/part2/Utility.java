@@ -20,6 +20,13 @@ public class Utility {
             myArray[0] = nums[0];
             myArray[nums.length - 1] = nums[nums.length - 1];
     }
+    for (int count = 1; count < nums.length - 1; count++){
+     if (nums[count] == value && nums[count] != nums[count+1] && nums[count] != nums[count-1]){
+       myArray[count] = Math.max(nums[count+1], nums[count-1]);
+      }else {
+        myArray[count] = nums[count];
+     }
+    }
   }
 }
 
