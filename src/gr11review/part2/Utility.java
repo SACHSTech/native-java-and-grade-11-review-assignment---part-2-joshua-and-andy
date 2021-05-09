@@ -34,14 +34,19 @@ public class Utility {
      int myArray[] = new int [nums.length];
      //declear the variables
      int count;
+     // Check if theres only one digit in the array, if they are, nothing changed
      if (nums.length >= 1){
             myArray[0] = nums[0];
             myArray[nums.length - 1] = nums[nums.length - 1];
     }
+    // A for loop that will run until the count is equal to its length
     for (count = 1; count < nums.length - 1; count++){
+      // an if statement that will check if the count is the same as the given value and if it is equal to its left side or right side
      if (nums[count] == value && nums[count] != nums[count+1] && nums[count] != nums[count-1]){
+       // makes the alone number equal to whichever value to its left or right is larger 
        myArray[count] = Math.max(nums[count+1], nums[count-1]);
       }else {
+        // if there's no alone value, nothing changed
         myArray[count] = nums[count];
      }
     }
@@ -55,22 +60,27 @@ public class Utility {
     * If it cannot, returns false
     * @author: A. Shan
     */
+   
     //declear the variables
     int LeftSum = 0;
     int rightSum = 0;
     int count;
     int countAlt;
 
+    //Set a for loop that will calculate left sum
     for (count = 0; count < nums.length; count++){
       leftSum += nums[count];
       rightSum = 0;
+      // Another loop that will calculate the right sum based on where  the left sum ended
       for (countAlt = nums.length - 1; countAlt > count; countAlt--){
         rightSum += nums[countAlt];
       }
+      // it checks if the left sum and right sum are the same. If they are, return true
       if (LeftSum == rightSum){
         return true;
       }
     }
+    // Since there are not spot that can have the same right sum and the left sum, therefore false is returned
     return false;
   }
   public static void diagonal(int n){
