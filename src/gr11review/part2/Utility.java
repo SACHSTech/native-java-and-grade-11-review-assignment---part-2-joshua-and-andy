@@ -1,6 +1,6 @@
 package gr11review.part2;
 import java.io.*;
-
+import FileWriter.;
 public class Utility {
   public static int sumNumbers(String str){
     /**
@@ -94,7 +94,7 @@ public class Utility {
     // declear the varaibles
     int count = 0;
     int count2 = 0;
-    TextOutputFile diagonalOut = new TextOutputFile("diagonalOut.txt",true);
+    File diagonalOut = new File("diagonalOut.txt");
   }
 }
 
