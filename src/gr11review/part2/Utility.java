@@ -16,7 +16,7 @@ public class Utility {
     for (int count = 0; count < wordLength; count++){
       char digit = str.charAt(count);
       if (Character.isDigit(digit) == true){
-       int Start 
+       int Start;
          
      }
     }
@@ -62,7 +62,7 @@ public class Utility {
     */
    
     //declear the variables
-    int LeftSum = 0;
+    int leftSum = 0;
     int rightSum = 0;
     int count;
     int countAlt;
@@ -76,7 +76,7 @@ public class Utility {
         rightSum += nums[countAlt];
       }
       // it checks if the left sum and right sum are the same. If they are, return true
-      if (LeftSum == rightSum){
+      if (leftSum == rightSum){
         return true;
       }
     }
@@ -93,7 +93,7 @@ public class Utility {
     
     // declear the varaibles
     int count = 0;
-    int count2 = 0:
+    int count2 = 0;
     TextOutputFile diagonalOut = new TextOutputFile("diagonalOut.txt",true);
   }
 }
