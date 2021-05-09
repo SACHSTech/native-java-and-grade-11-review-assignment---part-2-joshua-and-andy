@@ -1,6 +1,6 @@
 package gr11review.part2;
 import java.io.*;
-import FileWriter.;
+import java.util.*;
 public class Utility {
   public static int sumNumbers(String str){
     /**
@@ -11,15 +11,20 @@ public class Utility {
 
     // declear the varaibles
     int wordLength;
-    int number;
+    int number = 0;
+    String WordNum = "";
+    //find the length of the word
     wordLength = str.length();
-    for (int count = 0; count < wordLength; count++){
-      char digit = str.charAt(count);
+
+    for (int i = 0; i < wordLength+1; i++){
+      char digit = str.charAt(i);
       if (Character.isDigit(digit) == true){
-       int Start;
-         
+        for (int j = i + 1; j < wordLength; j++){
+          
+        }
      }
     }
+    return number;
   }
     public static int[] notAlone(int[] nums, int value){
      /**
@@ -90,11 +95,8 @@ public class Utility {
     * with a comma between each number
     * @author: A. Shan
     */
-    
-    // declear the varaibles
     int count = 0;
     int count2 = 0;
-    File diagonalOut = new File("diagonalOut.txt");
   }
 }
 
