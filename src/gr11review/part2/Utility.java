@@ -80,7 +80,10 @@ public class Utility {
     * with a comma between each number
     * @author: A. Shan
     */
-    int 
+    
+    // declear the varaibles
+    int count = 0;
+    int count2 = 0:
     TextOutputFile diagonalOut = new TextOutputFile("diagonalOut.txt",true);
   }
 }
