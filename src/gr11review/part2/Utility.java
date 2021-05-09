@@ -12,16 +12,19 @@ public class Utility {
     // declear the varaibles
     int wordLength;
     int number = 0;
-    String WordNum = "";
     //find the length of the word
     wordLength = str.length();
 
     for (int i = 0; i < wordLength+1; i++){
       char digit = str.charAt(i);
-      if (Character.isDigit(digit) == true){
+      if (Character.isDigit(digit)){
         for (int j = i + 1; j < wordLength; j++){
-          
+          if (!Character.isDigit(digit)){
+            break;
+          }
         }
+        number += Integer.parseInt(str.substring(i, j));
+        i = j;
      }
     }
     return number;
