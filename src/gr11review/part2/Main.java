@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Main {
   public static void main(String[] args) throws IOException{
-  int n = 6;
+  int n = 8;
   Utility.diagonal(n);
   }
 }

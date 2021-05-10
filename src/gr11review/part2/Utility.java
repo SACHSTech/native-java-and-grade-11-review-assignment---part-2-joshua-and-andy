@@ -151,7 +151,9 @@ public class Utility {
            theout.print(",");
          }
       }
+      theout.println("");
     }
+    theout.close();
   }
 }
 
