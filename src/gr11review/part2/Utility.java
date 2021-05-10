@@ -126,15 +126,32 @@ public class Utility {
     // Since there are not spot that can have the same right sum and the left sum, therefore false is returned
     return false;
   }
-  public static void diagonal(int n){
+  public static void diagonal(int n) throws IOException{
     /**
     * Given a integer n
     * outputs a two-dimensional array of size (nxn) to a text file
     * with a comma between each number
     * @author: A. Shan
     */
-    int count = 0;
-    int count2 = 0;
+    // declearing the variables
+    int i;
+    int j;
+
+    PrintWriter theout = new PrintWriter(new FileWriter("diagonalOut.txt", true));
+    for (i = 0; i < n; i++){
+      for (j = 0; j < n; j++){
+        if ((i+j) == n - 1){
+          theout.print("1");
+        }else if((i+j) < n - 1){
+          theout.print("0");
+        }else{
+          theout.print("2");
+         }
+         if (j != n-1){
+           theout.print(",");
+         }
+      }
+    }
   }
 }
 
