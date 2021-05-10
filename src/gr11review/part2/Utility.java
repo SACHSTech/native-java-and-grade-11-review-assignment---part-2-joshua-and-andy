@@ -49,14 +49,19 @@ public class Utility {
     */
 
     //declearing the variables
-    String FirstWord = ""; 
+    String FirstWord; 
     String comparison = "";
     BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
     // giving values to variables
     FirstWord = thefile.readLine(); 
-    
-    while (comparison != null){
+    // A while loop to compare two words' alphabetical order. When loop won't stop until it reaches the bottom of the list
+    while (comparison != "null"){
+      comparison = thefile.readLine();
+      if (FirstWord.compareTo(comparison) > 0){
+        FirstWord = comparison;
+      }
     }
+    thefile.close();
     return FirstWord;
   } 
     public static int[] notAlone(int[] nums, int value){
