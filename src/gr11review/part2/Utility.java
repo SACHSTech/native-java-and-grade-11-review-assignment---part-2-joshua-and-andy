@@ -39,11 +39,19 @@ public class Utility {
     //return the sum
     return number;
   }
+     /**
+    * Given the name of a file
+    * Compare each word on each line of the file
+    * Return the word that is alphabetically first 
+    * @author: A. Shan
+    */
   public static String alphaWord(String filenametxt) throws IOException{
     String FirstWord = ""; 
+    String 
+    BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
 
     return FirstWord;
-  }
+  } 
     public static int[] notAlone(int[] nums, int value){
      /**
     * If an element in an array is "alone" if there are values before and after it,
