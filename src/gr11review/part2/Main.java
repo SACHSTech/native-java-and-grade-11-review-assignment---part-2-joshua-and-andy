@@ -4,7 +4,7 @@ import java.io.*;
 public class Main {
   public static void main(String[] args) throws IOException{
   int sum;
-  sum =  Utility.sumNumbers("aa22b33b");
+  sum =  Utility.sumNumbers("aa22b33");
   System.out.println(sum);
   }
 }

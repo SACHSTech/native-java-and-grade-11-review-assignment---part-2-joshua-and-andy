@@ -1,6 +1,5 @@
 package gr11review.part2;
 import java.io.*;
-import java.util.*;
 public class Utility {
   public static int sumNumbers(String str){
     /**
@@ -12,22 +11,38 @@ public class Utility {
     // declear the varaibles
     int wordLength;
     int number = 0;
+    int i;
+    int j = 0;
+    String WordNums;
     //find the length of the word
     wordLength = str.length();
-
-    for (int i = 0; i < wordLength+1; i++){
+    // First for loop that check each character and put them in a char
+    for (i = 0; i < wordLength; i++){
       char digit = str.charAt(i);
+      // Check if the char character is a digit or not
       if (Character.isDigit(digit)){
-        for (int j = i + 1; j < wordLength; j++){
-          if (!Character.isDigit(digit)){
+        //if it is a digit check for the digit after it
+        for (j = i + 1; j < wordLength; j++){
+          char AnotherDigit = str.charAt(j);
+          // if it is not a digit the second for loop breaks
+          if (!Character.isDigit(AnotherDigit)){
             break;
           }
         }
-        number += Integer.parseInt(str.substring(i, j));
+        // Now we use the first count and the second count as the positon of the number start and ends. We take the number as string and convert them into integer before adding them togther.
+        WordNums = str.substring(i, j);
+        number += Integer.parseInt(WordNums);
+        // When finding the next number, we need to start where it ended in the string
         i = j;
      }
     }
+    //return the sum
     return number;
+  }
+  public static String alphaWord(String filenametxt) throws IOException{
+    String FirstWord = ""; 
+
+    return FirstWord;
   }
     public static int[] notAlone(int[] nums, int value){
      /**
