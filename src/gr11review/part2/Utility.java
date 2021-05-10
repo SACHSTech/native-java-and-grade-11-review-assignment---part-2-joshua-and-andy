@@ -138,21 +138,27 @@ public class Utility {
     int j;
 
     PrintWriter theout = new PrintWriter(new FileWriter("diagonalOut.txt", true));
+    // first for loop that adds the row and the second loop adds the column 
     for (i = 0; i < n; i++){
       for (j = 0; j < n; j++){
+        // if i+j equals n - 1 (because its counts from 0), it means it is on the diagonal line which prints 1
         if ((i+j) == n - 1){
           theout.print("1");
+        // if i+j is less than n - 1 , it means it is on the left side of diagonal line which prints 0
         }else if((i+j) < n - 1){
           theout.print("0");
         }else{
+        // if i+j is less than n - 1 , it means it is on the left side of diagonal line which prints 2
           theout.print("2");
          }
          if (j != n-1){
            theout.print(",");
          }
       }
+      // goes to the next line
       theout.println("");
     }
+    // the file closes
     theout.close();
   }
 }
