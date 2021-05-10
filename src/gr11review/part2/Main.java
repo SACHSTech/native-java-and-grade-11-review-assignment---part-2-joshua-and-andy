@@ -1,7 +1,6 @@
-//package gr11review.part2;
+package gr11review.part2;
 import java.io.*;
-public class Main{
-
+public class Main {
     public static void main(String[] args) throws IOException{
 
         // Methods 1
