@@ -39,17 +39,24 @@ public class Utility {
     //return the sum
     return number;
   }
-     /**
+
+  public static String alphaWord(String filenametxt) throws IOException{
+    /**
     * Given the name of a file
     * Compare each word on each line of the file
     * Return the word that is alphabetically first 
     * @author: A. Shan
     */
-  public static String alphaWord(String filenametxt) throws IOException{
-    String FirstWord = ""; 
-    String 
-    BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
 
+    //declearing the variables
+    String FirstWord = ""; 
+    String comparison = "";
+    BufferedReader thefile = new BufferedReader(new FileReader(filenametxt));
+    // giving values to variables
+    FirstWord = thefile.readLine(); 
+    
+    while (comparison != null){
+    }
     return FirstWord;
   } 
     public static int[] notAlone(int[] nums, int value){
